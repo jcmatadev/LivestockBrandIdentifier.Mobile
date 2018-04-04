@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LivestockBrandIdentifier.Mobile.Pages;assembly=LivestockBrandIdentifier.Mobile" 
+             x:Class="LivestockBrandIdentifier.Mobile.Pages.MainPage">
+
+    <NavigationPage Title="Register" Icon="add.png">
+        <x:Arguments>
+            <local:RegisterPage />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Search" Icon="search.png">
+        <x:Arguments>
+            <local:SearchPage />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

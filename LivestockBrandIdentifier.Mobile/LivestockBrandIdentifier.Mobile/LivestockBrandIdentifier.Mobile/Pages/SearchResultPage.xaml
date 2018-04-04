@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LivestockBrandIdentifier.Mobile.Pages.SearchResultPage"
+             xmlns:converters="clr-namespace:LivestockBrandIdentifier.Mobile;assembly=LivestockBrandIdentifier.Mobile"
+             Title="Search Results"
+             Padding="10">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+        <converters:ImageConverter x:Key="ImageConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ListView" ItemTapped="ListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell ImageSource="{Binding Path=Image, Converter={StaticResource ImageConverter}}" 
+                                    Text="{Binding Path=FarmName}"
+                                    Detail="{Binding Path=OwnerName}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

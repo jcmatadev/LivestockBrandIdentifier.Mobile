@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LivestockBrandIdentifier.Mobile.Pages.SearchPage"
+             Title="Search"
+             Padding="10">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="TiClear" Clicked="TiClear_Clicked" Order="Primary" Priority="1" Icon="refresh.png"/>
+        <ToolbarItem x:Name="TiSearch" Clicked="TiSearch_Clicked" Order="Primary" Priority="1" Icon="search-bw.png"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout x:Name="SearchForm">
+            <Entry Placeholder="Farm Name" Text="{Binding Path=FarmName, Mode=TwoWay}"></Entry>
+            <Entry Placeholder="Owner Name" Text="{Binding Path=OwnerName, Mode=TwoWay}"></Entry>
+            <Entry Placeholder="Phone Number" Text="{Binding Path=PhoneNumber, Mode=TwoWay}" Keyboard="Telephone"></Entry>
+            <Entry Placeholder="State" Text="{Binding Path=State, Mode=TwoWay}"></Entry>
+            <Entry Placeholder="City" Text="{Binding Path=City, Mode=TwoWay}"></Entry>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

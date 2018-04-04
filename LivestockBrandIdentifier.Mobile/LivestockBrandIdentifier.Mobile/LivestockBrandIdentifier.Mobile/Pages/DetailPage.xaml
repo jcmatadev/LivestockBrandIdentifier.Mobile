@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="LivestockBrandIdentifier.Mobile.Pages.DetailPage"
+            xmlns:converters="clr-namespace:LivestockBrandIdentifier.Mobile;assembly=LivestockBrandIdentifier.Mobile"
+            Title="Detail"
+            Padding="10">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="ImageConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="{Binding Path=Image, Converter={StaticResource ImageConverter}}" Aspect="AspectFit"/>
+            <Grid HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Farm Name" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="{Binding Path=FarmName}" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Owner Name" FontAttributes="Bold" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="{Binding Path=OwnerName}" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Phone Number" FontAttributes="Bold" Grid.Row="2" Grid.Column="0"/>
+                <Label Text="{Binding Path=PhoneNumber}" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="State" FontAttributes="Bold" Grid.Row="3" Grid.Column="0"/>
+                <Label Text="{Binding Path=State}" Grid.Row="3" Grid.Column="1"/>
+
+                <Label Text="City" FontAttributes="Bold" Grid.Row="4" Grid.Column="0"/>
+                <Label Text="{Binding Path=City}" Grid.Row="4" Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
